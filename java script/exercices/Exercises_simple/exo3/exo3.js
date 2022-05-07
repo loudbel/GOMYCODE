@@ -16,7 +16,7 @@ function TriangleArea(b,h){
     return area = 0.5 * b * h ;
 }
 
-console.log(10,5); 
-k
+console.log(TriangleArea(10,5)); 
+
 
 

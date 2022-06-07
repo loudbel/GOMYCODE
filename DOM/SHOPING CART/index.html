@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="cart.js"></script>
+</head>
+<body>
+    <h1>DOM Checkpoint</h1>
+    <div class="main">
+        
+        <div class="products">
+            <h2>Liste produits</h2>
+            <div productID="0" class="product">
+                <h3 class="prod-title">nom du produit</h3>
+                <p class="description">
+                    blablabla
+                </p>
+                <span class="price">
+                    15  
+                </span>
+                <button class="add">Add to cart</button>
+                <span class="fav"><i class="fa fa-heart" aria-hidden="true"></i></span>
+            
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="cart-products">
+                <div productID="0" class="product">
+                    <button class="delete"><i class="fa fa-close" aria-hidden="true"></i></button>
+                    <div class="prod-details">
+                    <h3 class="prod-title">nom du produit</h3>
+                    <p class="description">
+                        blablabla
+                    </p>
+                    </div>
+                    
+                    <span class="price">
+                        15  
+                    </span>
+                    <div class="quant">
+                        <input class="qte" type="number" name="quantite" min="1" value="1">
+                    </div>
+                    <div class="total-prod">
+                        30   
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="final" > 
+            <div class="vat">
+                <span class="taux">19%</span>
+                <div class="total-vat">1500</div>
+            </div>
+            
+            <span class="tot">TOTAL</span><span class="total">15 000</span>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

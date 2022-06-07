@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* main structure */
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1120px;
+}
+.products {
+    width: 50%;
+}
+
+.cart {
+    width: 50%;
+}
+.product {
+    position: relative;
+}
+
+/* products */
+.products .product {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+button.add {
+    background: white;
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    border: 1px grey solid;
+    border-radius: 5px;
+}
+button.add:hover {
+    cursor: pointer;
+    background: aliceblue;
+}
+
+span.fav {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+span.fav:hover{
+    cursor: pointer;
+}
+span.fav:hover > i.fa.fa-heart {
+    color: red;
+    cursor: pointer;
+}
+
+/* cart */
+.cart .product {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.prod-details {
+    margin-right: 15px;
+}
+button.delete {
+    width:20px;
+    height: 20px;
+    background: black;
+    color: white;
+    padding: 3px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+}
+
+button.delete:hover {
+    cursor: pointer;
+    background: red;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+   width: 14px;
+    height: 30px;
+}
+
+
+input.qte {
+    max-width: 36px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* total */
+.vat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+span.taux {
+    margin: 0 10px;
+} 
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

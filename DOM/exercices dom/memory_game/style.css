@@ -78,8 +78,3 @@ body {
 .card > * {
   pointer-events: none;
 }
-
-/* cutom by amine */
-.card_face.card_back {
-  opacity: 0.2;
-}

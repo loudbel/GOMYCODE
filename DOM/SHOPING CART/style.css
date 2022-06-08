@@ -22,13 +22,22 @@ body {
     box-sizing: border-box;
     max-width: 1120px;
 }
-.products {
+
+#produits {
     width: 50%;
 }
+#cart {
+    width: 100%;
+}
 
+.products {
+    width: 100%;
+}
 .cart {
     width: 50%;
 }
+
+
 .product {
     position: relative;
 }
@@ -69,6 +78,14 @@ span.fav:hover{
 span.fav:hover > i.fa.fa-heart {
     color: red;
     cursor: pointer;
+}
+
+span.favfalse{
+    color: black;
+}
+
+span.favtrue{
+    color: red;
 }
 
 /* cart */

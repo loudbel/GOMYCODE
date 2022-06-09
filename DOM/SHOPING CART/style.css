@@ -135,15 +135,15 @@ input.qte {
 }
 
 /* total */
-.vat{
+#vat{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-span.taux {
+#taux {
     margin: 0 10px;
 } 
-.total {
+#total {
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -39,7 +39,7 @@ function templateListProduct(product,i){
             '<p class="description">'+product.description+'</p>' + 
             '<span class="price"> PRIX : '+product.price+' DA</span>' + 
             '<button oncart="false" productid="'+i+'"  class="add" onclick="toCart(products, this)">Add to cart</button>' + 
-            '<span onclick="addFav('+i+')" class="fav fav'+product.fav+'" ><i class="fa fa-heart"></i></span>' + 
+            '<span onclick="addFav(this, '+i+')" class="fav fav'+product.fav+'" ><i class="fa fa-heart"></i></span>' + 
             '</div>' + 
         '</div>';
         return template;
@@ -115,11 +115,13 @@ function quantCount(el,i){
 }
 
 //ajouter produit aux favoris
-function addFav(i){
+function addFav(el, i){
   console.log(products[i].fav);
   if(products[i].fav === false){
   products[i].fav = true;
+  el.style.color = "red";
   } else {
     products[i].fav = false;
+    el.style.color = "black";
   }
 }

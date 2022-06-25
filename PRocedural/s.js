@@ -1,5 +1,3 @@
-let x = 'c';
-let str = 'ma reherche';
 
 function search(x,str){
     let res = {
@@ -10,35 +8,34 @@ function search(x,str){
         if(str[i]==x || str[i].toUpperCase()==x  ){
             res.pos = i;
             res.find = true;
-            
             break;
         }
     }
     return res;
 }
-console.log(search(x,str))
-
 
 function deleteEl(x,str){
-    let f = search(x,str);
-
-    if(f.find == true){
-        str.slice(f.pos,1)
-    }
-    return str;
-}
-console.log(deleteEl(x,str))
-
-function deleteAll(x,str){
     let res;
-    let r = search(x,str);
-
-    console.log(r.find)
-    if(r.find == true){
-        res = str.replaceAll(x, "");
-    }
-    
+    let f = search(x,str);
+    if(f.find == true){
+        res = str.slice(0, f.pos) + str.slice(f.pos+1);
+    } else { res = 'not found';}
     return res;
 }
 
-console.log(deleteAll(x,str))
+function deleteAll(x,str){
+    let res = str.slice(0);
+    let r = search(x,res);
+
+    while (r.find == true) {
+        res = deleteEl(x,res);
+        r = search(x,res)
+    }
+    return res;
+}
+
+let x = 'c';
+let str = 'ma recherche';
+console.log(' resultat de recherche : ', search(x,str));
+console.log(' suppression du premier : ', deleteEl(x,str));
+console.log(' suppression de tous : ', deleteAll(x,str));
